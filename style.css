@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.grid-container {
+	/* margin: 10px; */
+	height: 100vh;
+	border: 1px solid red;
+	display: grid;
+	grid-template-columns: 1fr 30%;
+	grid-template-rows: 30% 50px 1fr 10%;
+	grid-template-areas:
+		'header header'
+		'nav sidebar'
+		'content sidebar'
+		'footer footer';
+	grid-column-gap: 10px;
+	grid-row-gap: 20px;
+}
+
+/* grid-template-columns: 3fr 1fr;
+	grid-template-rows: [header-start] 20% [header-end] 10% [nav-end] 2fr [content-end] 1fr [footer-end];
+} */
+
+.item {
+	/* margin: 5px; */
+	border: 1px solid black;
+}
+
+div.item.header img {
+	width: 100%;
+}
+
+.header {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	grid-area: header;
+	background-image: url('./img/ice-cubes-3506781_1920.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	/* background-size: cover; */
+
+	background-position: center;
+}
+
+.nav {
+	margin-left: 10px;
+	grid-area: nav;
+}
+
+.sidebar {
+	margin-right: 10px;
+	grid-area: sidebar;
+}
+
+.content {
+	margin-left: 10px;
+	grid-area: content;
+}
+
+.footer {
+	margin: 0 10px;
+	grid-area: footer;
+}
+
+/* 
+.header {
+	grid-row: header-start/header-end;
+	grid-column: 1/5;
+}
+
+.nav {
+	grid-row: header-end/nav-end;
+	grid-column: 1/5;
+}
+
+.content {
+	grid-row: nav-end/content-end;
+}
+
+.footer {
+	grid-row: content-end/footer-end;
+	grid-column: 1/5;
+} */
